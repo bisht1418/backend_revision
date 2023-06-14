@@ -58,7 +58,7 @@ userRouter.get("/", async (req, res) => {
     const users = await userModel.find({});
     res.status(200).json({ data: users });
   } catch (error) {
-    res.status(500).json({ message: error });
+    res.status(500).json({ message: error.message });
   }
 });
 
